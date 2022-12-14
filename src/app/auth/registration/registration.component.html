@@ -1,1 +1,8 @@
-<p>registration works!</p>
+<h1>Sign up</h1>
+<form #registartionForm="ngForm" (ngSubmit)="onRegister(registartionForm)">
+    <input type="text" ngModel name="username" placeholder="Enter username">
+    <br>
+    <input type="password" ngModel name="password" placeholder="Enter password">
+    <br>
+    <button type="submit">Sign up</button>
+</form>

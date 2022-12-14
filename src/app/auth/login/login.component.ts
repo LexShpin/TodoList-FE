@@ -18,8 +18,10 @@ export class LoginComponent {
       (response) => {
         console.log(response);
         loginForm.reset();
+        this.router.navigate(['todos']);
       },
       (error) => {
+        console.log(error.message);
         loginForm.reset();
       }
     )
