@@ -18,6 +18,7 @@ export class LoginComponent {
       (response) => {
         console.log(response);
         loginForm.reset();
+        localStorage.setItem('username', response.username);
         this.router.navigate(['todos']);
       },
       (error) => {

@@ -1,1 +1,96 @@
-<p>todos works!</p>
+<header class="navbar top-nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: #ffff; font-weight: bold;">>TodoList</a>
+    </div>
+</header>
+<div class="custom-container">
+    <main class="main">
+        <nav class="nav flex-column projects">
+            <ul class="projects__default">
+                <li>
+                    <a href="inbox">Inbox</a>
+                </li>
+                <li>
+                    <a href="today">Today</a>
+                </li>
+                <li>
+                    <a href="upcoming">Upcoming</a>
+                </li>
+            </ul>
+            <p>Projects</p>
+            <ul class="projects__custom">
+                <li>Example project</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProjectModal">
+                Add new project
+            </button>
+        </nav>
+        <div class="todos">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Today</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let todo of todos">
+                    <tr>
+                        <td><input class="form-check-input mt-0" type="checkbox"></td>
+                        <td>{{todo.description}} {{todo.dueDate}}</td>
+                        <td>{{todo.priority}}</td>
+                        <td>{{todo.projectId}}</td>
+                        <td class="action-column">
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-primary">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTodoModal">
+                Add todo
+            </button>
+        </div>
+    </main>
+    
+    <footer class="footer">Developed by Alexander Shpin</footer>
+    
+    <!-- Add Project Modal -->
+    <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addProjectModalLabel">Add project</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            form
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Todo Modal -->
+    <div class="modal fade" id="addTodoModal" tabindex="-1" aria-labelledby="addTodoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="addTodoModalLabel">Add todo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+

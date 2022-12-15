@@ -15,7 +15,7 @@ import { TodosComponent } from './todos/todos.component';
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    TodosComponent
+    TodosComponent,
   ],
   imports: [
     BrowserModule,
