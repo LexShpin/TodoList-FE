@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Todo } from './todo';
 import { TodosService } from './todos.service';
@@ -31,6 +32,10 @@ export class TodosComponent {
         console.log(error.message);
       }
     )
+  }
+
+  public onAddTodo(addTodoForm: NgForm): void {
+    
   }
 
 }
