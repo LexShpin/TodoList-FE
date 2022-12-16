@@ -8,6 +8,7 @@ import { Todo } from "./todo";
 })
 
 export class TodosService {
+    
     private apiServiceUrl = 'http://localhost:8089/todos';
 
     constructor(private http: HttpClient) {}
@@ -15,4 +16,5 @@ export class TodosService {
     public loadUserTodos(username: string): Observable<Todo[]> {
         return this.http.get<Todo[]>(`${this.apiServiceUrl}/${username}`);
     }
+    
 }

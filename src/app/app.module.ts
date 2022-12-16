@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistrationComponent } from './auth/registration/registration.component';
 import { TodosComponent } from './todos/todos.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { TodosComponent } from './todos/todos.component';
     LoginComponent,
     RegistrationComponent,
     TodosComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
